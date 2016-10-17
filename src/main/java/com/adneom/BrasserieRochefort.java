@@ -1,13 +1,13 @@
 package com.adneom;
 
-public class ChimayBrewery implements Brewery {
+public class BrasserieRochefort implements Brewery {
 	private Beer insignia;
-	private final String name = "Bières de Chimay Belgian";
+	private final String name = "Brasserie de Rochefort";
 
-	public ChimayBrewery() {
+	public BrasserieRochefort() {
 	}
 
-	public ChimayBrewery(Beer insignia) {
+	public BrasserieRochefort(Beer insignia) {
 		super();
 		this.insignia = insignia;
 	}
@@ -25,4 +25,5 @@ public class ChimayBrewery implements Brewery {
 	public String getName() {
 		return name;
 	}
+
 }

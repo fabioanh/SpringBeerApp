@@ -8,14 +8,7 @@ public class BeanConfig {
 
 	@Bean
 	public Brewery brewery() {
-		Brewery brewery = new ChimayBrewery(insignia(), "Bières de Chimay Belgian");
-		insignia().setBrewery(brewery);
-		return brewery;
-	}
-
-	@Bean
-	public Beer insignia() {
-		return chimayInsignia();
+		return rochefortBrewery();
 	}
 
 	@Bean
@@ -25,4 +18,27 @@ public class BeanConfig {
 		beer.setType("Strong Dark Ale");
 		return beer;
 	}
+	
+	@Bean
+	public Brewery chimayBrewery() {
+		Brewery brewery = new ChimayBrewery(chimayInsignia());
+		chimayInsignia().setBrewery(brewery);
+		return brewery;
+	}
+	
+	@Bean
+	public Beer rochefortInsignia() {
+		Beer beer = new Beer();
+		beer.setName("Trappistes Rochefort 10");
+		beer.setType("Quadrupel (Quad)");
+		return beer;
+	}
+	
+	@Bean
+	public Brewery rochefortBrewery() {
+		Brewery brewery = new BrasserieRochefort(rochefortInsignia());
+		rochefortInsignia().setBrewery(brewery);
+		return brewery;
+	}
+	
 }
