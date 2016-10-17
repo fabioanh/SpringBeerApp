@@ -25,4 +25,14 @@ public class ChimayBrewery implements Brewery {
 	public String getName() {
 		return name;
 	}
+
+	@Override
+	public void throwParty() {
+		try {
+			System.out.println("I'm throwing a crazy party with moderately valued: " + insignia.getName() + "!");
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }

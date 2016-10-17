@@ -26,4 +26,14 @@ public class BrasserieRochefort implements Brewery {
 		return name;
 	}
 
+	@Override
+	public void throwParty() {
+		try {
+			System.out.println("I'm throwing a crazy party with free: " + insignia.getName() + "!");
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
 }

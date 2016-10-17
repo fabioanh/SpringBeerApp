@@ -9,4 +9,5 @@ package com.adneom;
 public interface Brewery {
 	Beer getInsignia();
 	String getName();
+	void throwParty();
 }
