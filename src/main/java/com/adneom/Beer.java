@@ -8,7 +8,7 @@ package com.adneom;
  */
 public class Beer {
 	private String name;
-	private String brewery;
+	private Brewery brewery;
 	private String type;
 
 	public Beer() {
@@ -16,7 +16,11 @@ public class Beer {
 	}
 
 	public void identify() {
-		System.out.println("I am a: " + name + ", brewed by: " + brewery);
+		if (brewery != null) {
+			System.out.println("I am a: " + name + ", brewed by: " + brewery.getName());
+		} else {
+			System.out.println("I am a: " + name);
+		}
 	}
 
 	public String getName() {
@@ -27,12 +31,12 @@ public class Beer {
 		this.name = name;
 	}
 
-	public String getBrewery() {
+	public Brewery getBrewery() {
 		return brewery;
 	}
 
-	public void setBrewery(String brand) {
-		this.brewery = brand;
+	public void setBrewery(Brewery brewery) {
+		this.brewery = brewery;
 	}
 
 	public String getType() {
